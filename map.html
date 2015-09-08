@@ -33,13 +33,13 @@
     border-bottom: 2px groove black;
     border-left: 1px solid;
     border-right: 2px groove black;
+    padding: 5px;
     margin-bottom: 1px;
     color: black;
-    width: 100%;
+    width: 200px;
     height: auto;
-    background: #00B7FF;
+    background: #dcdcdc;
   }
-
   #infownd div {
     color: #000000 !important;
     display: inline-block;
@@ -48,10 +48,9 @@
     letter-spacing: -1px !important;
     white-space: nowrap !important;
     padding: 2px 5px 2px 2px !important;
+    margin-bottom: 5px;
     /*width: 500px;*/
-    background: #ff4a27;
   }
-
 
 </style>
 
@@ -100,7 +99,8 @@
                 data.result.items[i].addrdetail.rest];
               newPoint = new nhn.api.map.LatLng(data.result.items[i].point.y, data.result.items[i].point.x)
               oInfoWnd.setContent('<div id="infownd">' +
-                  '<div>' + addr.join(' ') + '</div></div>');
+                  '<div>' + addr.join(' ') + '</div>' +
+                  '<button type="button" class="btn btn-info btn-block btn-xs">Management</button></div>');
               oInfoWnd.setPoint(newPoint);
               oInfoWnd.setPosition({right: 10, top: 10});
               oInfoWnd.setVisible(true);
