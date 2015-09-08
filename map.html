@@ -19,7 +19,7 @@
   <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
   <script type="text/javascript"
-          src="//openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=e8fc15d32855da6ec1ec0d296b75907e"></script>
+          src="//openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=9328689aaf7a55a0f6c85d6db65fb77d"></script>
 </head>
 <body style="height:100%;margin:0;padding:0;">
 
@@ -86,7 +86,7 @@
     var oTarget = oCustomEvent.target;
     var newPoint = null;
     oInfoWnd.setVisible(false);
-    $.getJSON("http://openapi.map.naver.com/api/reversegeocode?key=e8fc15d32855da6ec1ec0d296b75907e&encoding=utf-8&coord=latlng&callback=?&output=json&query=" + oPoint.x + "," + oPoint.y,
+    $.getJSON("http://openapi.map.naver.com/api/reversegeocode?key=9328689aaf7a55a0f6c85d6db65fb77d&encoding=utf-8&coord=latlng&callback=?&output=json&query=" + oPoint.x + "," + oPoint.y,
         function (data) {
           console.log(data)
           for (var i in data.result.items) {
