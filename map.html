@@ -14,9 +14,10 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+  <!--jQuery-->
+  <!--<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>-->
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!--<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 
   <!--9328689aaf7a55a0f6c85d6db65fb77d-->
   <script type="text/javascript"
@@ -24,23 +25,35 @@
 </head>
 <body style="height:100%;margin:0;padding:0;">
 
-<div class="container" style="padding: 0;">
+<div class="container-fluid" style="padding: 0;">
   <div id="map" style="border:none; width:0px; height:0px; margin:0px;"></div>
 
   <!-- Modal -->
-  <div class="modal" id="myModal" role="dialog">
+  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header" style="padding:10px 10px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Add</h4>
+        <div class="modal-header" style="padding: 0;">
+          <h4 style="text-align: center;">Add item</h4>
         </div>
-        <div class="modal-body" style="padding:10px 50px;">
+        <div class="modal-body" style="padding:10px 0;">
           <form role="form">
             <div class="form-group">
               <input type="text" class="form-control" id="name" placeholder="name">
+            </div>
+            <div class="form-group dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" id="floor" placeholder="floor">
@@ -55,7 +68,9 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
+              class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
         </div>
       </div>
 
@@ -65,9 +80,9 @@
 </div>
 
 <style>
-  #myModal, button {
-    text-shadow: none;
-  }
+  /*#myModal, button {*/
+  /*text-shadow: none;*/
+  /*}*/
   #infownd {
     border-top: 1px solid;
     border-bottom: 2px groove black;
@@ -80,6 +95,7 @@
     height: auto;
     background: #dcdcdc;
   }
+
   #infownd p {
     color: #000000 !important;
     font-size: 12px !important;
@@ -91,14 +107,17 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .modal-header, h4, .close {
-    background-color: #5cb85c;
-    color:white !important;
-    text-align: center;
-    font-size: 13px;
+
+  input[type="text"], textarea {
+    outline: none;
+    box-shadow: none !important;
+    border: 0 !important;
+    border-radius: 0;
   }
-  .modal-footer {
-    background-color: #f9f9f9;
+
+  div.form-group {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
   }
 </style>
 
